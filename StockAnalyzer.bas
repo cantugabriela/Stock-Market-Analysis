@@ -39,6 +39,8 @@ Sub stock_analyzer():
 
 '-----EASY PART------
 
+    ' The easy part finds the total volume per ticker
+    
     ' For loop to iterate through the second row to the last
     For rowCounter = 2 To lastRow
         
@@ -63,8 +65,10 @@ Sub stock_analyzer():
         End If
         
 '-----MODERATE PART------
-
-        ' If the current ticker is the same as the one above and the ticker below is different than the current ticker then..
+        
+        ' The moderate part finds the percentChange, yearChange and conditionally formats the values under yearChange
+        
+        ' If the current ticker is the same as the one above and the ticker below is different than the current ticker then.
         If (ws.Cells(rowCounter - 1, 1).Value = ws.Cells(rowCounter, 1).Value And ws.Cells(rowCounter + 1, 1).Value <> ws.Cells(rowCounter, 1).Value) Then
             
             ' Capture the year close value at the current row
@@ -120,6 +124,8 @@ Sub stock_analyzer():
 
 '-----HARD PART------
 
+    ' Last part is the final results section for the greatest increase, greatest decrease, and greatest volume comparison
+    
     ' Declare values to have our loop compare
     ws.Cells(2, 17).Value = 0
     ws.Cells(3, 17).Value = 0
@@ -128,10 +134,10 @@ Sub stock_analyzer():
     ' Start our loop for the final results
     For resultsCounter = 2 To lastRow
         
-        ' If the percent change is greater than the value in cell 2,17
+        ' If the percent change is greater than the temporary value stored in cell (2,17)
         If ws.Cells(resultsCounter, 11).Value > ws.Cells(2, 17).Value Then
         
-            ' Store the percent change value in cell 2,17
+            ' Store the new temporary greater percent change value in cell (2,17)
             ws.Cells(2, 17).Value = ws.Cells(resultsCounter, 11).Value
             
             ' This statement will find the greatest value and print it to the results table
@@ -140,10 +146,10 @@ Sub stock_analyzer():
         End If
         
         
-        ' If the percent change is lower than the value in cell 3,17
+        ' If the percent change is lower than the temporary value stored in cell (3,17)
         If ws.Cells(resultsCounter, 11).Value < ws.Cells(3, 17).Value Then
             
-            ' Store the percent change value in cell 3,17
+            ' Store the new temporaty percent change value in cell (3,17)
             ws.Cells(3, 17).Value = ws.Cells(resultsCounter, 11).Value
             
             ' This statement will find the lowest value and print it the results table
@@ -152,10 +158,10 @@ Sub stock_analyzer():
             
         End If
         
-        ' If the volume is greater than the value in cell 4, 17
+        ' If the volume is greater than the temporary value in cell (4, 17)
         If ws.Cells(resultsCounter, 12).Value > ws.Cells(4, 17).Value Then
         
-            ' Store the greater volume in cell 4,17
+            ' Store the greater volume in cell (4,17)
             ws.Cells(4, 17).Value = ws.Cells(resultsCounter, 12).Value
             
             ' This statement will find the highest volume and print it in the results table
