@@ -27,7 +27,7 @@ VBA script analyzing the stock market from 2014 to 2016 with different levels of
 * Make the appropriate adjustments to your script that will allow it to run on every worksheet just by running it once.
 
 
-Sample 2015 Analysis Results: 
+**Sample 2015 Analysis Results:** 
 ![alt text][Results]
 
 [Results]: https://raw.githubusercontent.com/cantugabriela/VBA_Assignment/master/Screenshots/2015%20Analysis.PNG "2015 Results Screenshot"
