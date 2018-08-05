@@ -12,7 +12,6 @@ VBA script analyzing the stock market from 2014 to 2016 with different levels of
 ### Moderate
 
 * Create a script that will loop through all the stocks and take the following info.
-
 ⋅⋅* Yearly change from what the stock opened the year at to what the closing price was.
 ⋅⋅* The percent change from the what it opened the year at to what it closed.
 ⋅⋅* The total Volume of the stock
@@ -27,7 +26,7 @@ VBA script analyzing the stock market from 2014 to 2016 with different levels of
 * Make the appropriate adjustments to your script that will allow it to run on every worksheet just by running it once.
 
 
-
+Sample 2015 Analysis results: 
 ![alt text][Results]
 
 [Results]: https://raw.githubusercontent.com/cantugabriela/VBA_Assignment/master/Screenshots/2015%20Analysis.PNG "2015 Results Screenshot"
