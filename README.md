@@ -2,12 +2,12 @@
 
 VBA script analyzing the stock market from 2014 to 2016 in three parts. 
 
-### Part 1(Easy)
+### Part 1 (Easy):
 
 * Create a script that will loop through each year of stock data and grab the total amount of volume each stock had over the year.
 * Display the ticker symbol to coincide with the total volume.
 
-### Part 2 (Moderate)
+### Part 2 (Moderate):
 
 * Create a script that will loop through all the stocks and take the following info.
 
@@ -18,7 +18,7 @@ VBA script analyzing the stock market from 2014 to 2016 in three parts.
 
 * Add conditional formatting that will highlight positive change in green and negative change in red.
 
-### Part 3 (Hard)
+### Part 3 (Hard):
 
 * Your solution will include everything from the moderate challenge.
 * Your solution will also be able to locate the stock with the "Greatest % increase", "Greatest % Decrease" and "Greatest total volume".
